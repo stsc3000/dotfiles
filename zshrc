@@ -61,5 +61,5 @@ export PATH=".git/safe/../../bin:$PATH"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
+[[ -f ~/.oh-my-zshrc ]] && source ~/.oh-my-zshrc
 PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
