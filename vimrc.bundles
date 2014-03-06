@@ -28,6 +28,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-sleuth'
+Bundle 'ngmy/vim-rubocop'
+Bundle 'bling/vim-bufferline'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

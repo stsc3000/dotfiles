@@ -54,12 +54,11 @@ if which rbenv &>/dev/null ; then
 fi
 
 # mkdir .git/safe in the root of repositories you trust
-export PATH=".git/safe/../../bin:$PATH"
+export PATH="$PATH:.git/safe/../../bin"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 [[ -f ~/.oh-my-zshrc ]] && source ~/.oh-my-zshrc
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
