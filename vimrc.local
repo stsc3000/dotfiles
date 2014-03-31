@@ -18,3 +18,42 @@ nnoremap <C-right> :vertical resize +5<cr>
 
 " Open NerdTree with Leader-x
 map <Leader>n :NERDTreeToggle<CR>
+
+" Ignore php files
+"let g:ctrlp_custom_ignore = {
+  "\ 'dir':  '\v[\/](\.git|\.hg|\.svn|oxid)$',
+  "\ 'file': '\v\.(php|feature_|rst|feature)$'
+  "\ }
+"let g:ctrlp_max_files = 30000
+
+" Mappings to access buffers (don't use "\p" because a
+" delay before pressing "p" would accidentally paste).
+" \l       : list buffers
+" \b \f \g : go back/forward/last-used
+" \1 \2 \3 : go to buffer 1/2/3 etc
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>g :e#<CR>
+nnoremap <Leader>wb :Bclose<CR>
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
+let g:bufferline_echo = 0
+
+" Unite Configuration
+nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
+nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+" CtrlP search
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#source('file_rec','sorters','sorter_rank')
+" replacing unite with ctrl-p
+nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec<cr>

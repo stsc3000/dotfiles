@@ -1,0 +1,23 @@
+set t_Co=256
+colorscheme railscasts
+set background=dark
+let mapleader = ","
+
+" Highlight line on Leader-x
+:hi CursorLine   cterm=NONE ctermbg=lightgrey ctermfg=black guibg=grey guifg=white
+:nnoremap <Leader>x :set cursorline! <CR>
+
+"Set default width for NERDTree panel
+let g:NERDTreeWinSize = 40
+
+" resize current buffer by +/- 5 
+nnoremap <C-left> :vertical resize -5<cr>
+nnoremap <C-down> :resize +5<cr>
+nnoremap <C-up> :resize -5<cr>
+nnoremap <C-right> :vertical resize +5<cr>
+
+" Open NerdTree with Leader-x
+map <Leader>n :NERDTreeToggle<CR>
+
+" Toggle Comment with Leader-c
+map <Leader>c :NERDComToggleComment<CR>
