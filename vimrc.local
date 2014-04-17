@@ -49,11 +49,13 @@ nnoremap <Leader>0 :10b<CR>
 let g:bufferline_echo = 0
 
 " Unite Configuration
-nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
-nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+nnoremap <silent> <Leader>m :Unite -buffer-name=recent -start-insert -winheight=10 file_mru<cr>
+nnoremap <Leader>b :Unite -buffer-name=buffers -start-insert -winheight=10 buffer<cr>
 " CtrlP search
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file_rec','sorters','sorter_rank')
 " replacing unite with ctrl-p
-nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec<cr>
+nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
+
+
