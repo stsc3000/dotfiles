@@ -16,6 +16,12 @@ alias v="$VISUAL"
 # git
 alias gci="git pull --rebase && rake && git push"
 
+#tig
+alias ts="tig status"
+
+#yard server
+alias ys="yard server -G"
+
 # Bundler
 alias b="bundle"
 

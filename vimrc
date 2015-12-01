@@ -1,3 +1,6 @@
+" ruby path if you are using rbenv
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
+
 " Leader
 let mapleader = " "
 
@@ -63,19 +66,18 @@ set expandtab
 set list listchars=tab:»·,trail:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+"if executable('ag')
+  "" Use Ag over Grep
+  "set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  "" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+  "" ag is fast enough that CtrlP doesn't need to cache
+  "let g:ctrlp_use_caching = 0
+"endif
 
 " Color scheme
-colorscheme github
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 

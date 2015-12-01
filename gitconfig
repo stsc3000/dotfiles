@@ -22,5 +22,7 @@
 [commit]
   template = ~/.gitmessage
 [user]
-	name = stsc3000
+	name = Steffen Schildknecht
 	email = steffen.schildknecht@zweitag.de
+[web]
+	browser = chromium-browser

@@ -49,9 +49,9 @@ export EDITOR=$VISUAL
 export EYRC=./.eyrc
 
 # load rbenv if available
-if which rbenv &>/dev/null ; then
-  eval "$(rbenv init - --no-rehash)"
-fi
+#if which rbenv &>/dev/null ; then
+  #eval "$(rbenv init - --no-rehash)"
+#fi
 
 # mkdir .git/safe in the root of repositories you trust
 export PATH="$PATH:.git/safe/../../bin"
@@ -59,6 +59,19 @@ export PATH="$PATH:.git/safe/../../bin"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# Local config
+ #Local config
 [[ -f ~/.oh-my-zshrc ]] && source ~/.oh-my-zshrc
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - --no-rehash -)"
+
+
+alias rspec='nocorrect rspec'
+alias vagrant='/usr/bin/vagrant'
+
+# Elixir
+
+export PATH="$HOME/elixir/bin:$PATH"
+
+# Faster Haml withou rbenv lookup for gulp-ruby-haml
+alias haml='/home/stsc/.rbenv/versions/2.1.1/bin/haml'
